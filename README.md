@@ -1,18 +1,14 @@
 # Đề tài niên luận ngành ATTT: PHÁT HIỆN KEYLOGGER SỬ DỤNG THUẬT TOÁN HỌC MÁY
-Cấu trúc thư mục đề tài:
+Cấu trúc thư mục đầy đủ củacủa đề tài:
 ```texttext
 D:\Final_keylogger_ML_2\
 ¦   analyze_data.py
-¦   Biểu_đồ_ss_bảng_hiệu_nang.png
 ¦   notepad_features_detailed.csv
 ¦   notepad_features_summary.json
-¦   processed_features_cleaned.rar
-¦   thờii_gian_huấn_luyện_bảng_hiệu_nang.png
-¦   ve_bang_hieu_nang.py
 ¦   Xu_ly_dl.py
 ¦   
 +---Application
-¦       App_copy.py
+¦       App.py
 ¦       
 +---CatBoost
 ¦       best_catboost_model.pkl
