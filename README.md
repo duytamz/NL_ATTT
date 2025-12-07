@@ -1,5 +1,5 @@
 # Đề tài niên luận ngành ATTT: PHÁT HIỆN KEYLOGGER SỬ DỤNG THUẬT TOÁN HỌC MÁY
-Cấu trúc thư mục đầy đủ củacủa đề tài:
+Cấu trúc thư mục đầy đủ của đề tài:
 ```texttext
 D:\Final_keylogger_ML_2\
 ¦   analyze_data.py
@@ -164,11 +164,11 @@ Triển khai huấn luyện 05 thuật toán với các chiến lược tối ư
     - Kết hợp **Behavior Check** (giám sát hành vi IO/CPU bất thường).
 - Tích hợp công cụ **Autoruns** để kiểm tra khởi động hệ thống.
 
-
-🚀 Hướng dẫn Cài đặt & Thực thi
+---
+##🚀 Hướng dẫn Cài đặt & Thực thi
 Vui lòng tuân thủ đúng trình tự sau để đảm bảo luồng dữ liệu (Data Pipeline) hoạt động chính xác từ khâu xử lý thô đến huấn luyện mô hình.
 
-Giai đoạn 1: Xử lý Dữ liệu
+###Giai đoạn 1: Xử lý Dữ liệu
 Trích xuất đặc trưng: Chạy file analyze_data.py.
 
 Lưu ý: File này hoạt động kết hợp với __init__.py và features.py trong thư mục ember2018. Hãy kiểm tra kỹ đường dẫn thư mục trước khi chạy.
@@ -179,7 +179,7 @@ Trực quan hóa (EDA): Chạy analyze_and_visualize_data.py để xem các bi�
 
 Làm sạch dữ liệu: Chạy Xu_ly_dl.py. Bước này thực hiện cân bằng dữ liệu, giảm chiều và lọc nhiễu.
 
-Giai đoạn 2: Huấn luyện Mô hình
+###Giai đoạn 2: Huấn luyện Mô hình
 Chạy lần lượt các script huấn luyện để tạo ra file model (.pkl hoặc .h5):
 
 python Random_forest/RF.py
@@ -192,7 +192,7 @@ python XGBoost/XGBoost.py
 
 python CatBoost/CB.py
 
-Giai đoạn 3: Cấu hình & Chạy Ứng dụng
+###Giai đoạn 3: Cấu hình & Chạy Ứng dụng
 Cập nhật Model: Mở file App.py, tìm dòng khai báo đường dẫn model và thay thế bằng đường dẫn tới file .pkl tốt nhất vừa huấn luyện (ví dụ: LightGBM/best_lightgbm_model.pkl).
 
 Khởi chạy:
@@ -214,7 +214,7 @@ Ctrl + Shift + Q: Tắt ứng dụng Keylogger.
 
 Ctrl + K: Kiểm tra trạng thái hoạt động của Keylogger.
 
-🧹 Hướng dẫn Dọn dẹp sau Kiểm thử
+##🧹 Hướng dẫn Dọn dẹp sau Kiểm thử
 Keylogger mẫu sẽ tạo một khóa Registry để tự khởi động cùng Windows. Sau khi test xong, vui lòng thực hiện các bước sau để xóa bỏ hoàn toàn:
 
 Nhấn tổ hợp phím Win + R.
