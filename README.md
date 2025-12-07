@@ -165,19 +165,66 @@ Triển khai huấn luyện 05 thuật toán với các chiến lược tối ư
 - Tích hợp công cụ **Autoruns** để kiểm tra khởi động hệ thống.
 
 
-## Trình tự chạy các file
-1. Chạy analyze_data.py đồng thời kết hợp với 2 file init.py và features.py (lưu ý về đường dẫn thư mục).
-2. Chạy process_and_split_features.py: xử lý dữ liệu thô thành các file csv.
-3. Chạy analyze_and_visualize_data.py: trực quan dữ liệu sau khi đã xử lý.
-4. Chạy Xu_ly_dl.py: xử lý sạch dữ liệu (ví dụ như cân bằng, giảm chiều...).
-5. Lần lượt chạy các mô hình máy học (random forest, LightGBM, MLP, XGBoost, CatBoost).
-6. Thay đường dẫn đến file .pkl ở file App.py và tiến hành test.
-7. File chương trình keylogger dùng để test là myProject.exe
-- Một số lưu ý:
-          - Chạy App.py dưới quyền Administrator để có thể mở rộng Autorun quét các tiến trình.
-          - File myProject.exe chạy dưới quyền Administrator, ứng dụng lưu ở thư mục hiện hành, muốn tắt ứng dụng sử dụng tổ hợp phím ctrl + shift + Q, kiểm tra keylogger có còn hoạt động không thì nhấn tổ hợp              phím ctrl + K.
-          - Khi test xong nên xóa keylogger chạy nền bằng cách sau:
-                  a. Nhấn tổ hợp phím win + R.
-                  b. Nhập 'regedit' và nhấn 'OK'.
-                  c. Đến đường dẫn 'Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run' và xóa tiến trình có tên 'ListenToUser'.
+🚀 Hướng dẫn Cài đặt & Thực thi
+Vui lòng tuân thủ đúng trình tự sau để đảm bảo luồng dữ liệu (Data Pipeline) hoạt động chính xác từ khâu xử lý thô đến huấn luyện mô hình.
+
+Giai đoạn 1: Xử lý Dữ liệu
+Trích xuất đặc trưng: Chạy file analyze_data.py.
+
+Lưu ý: File này hoạt động kết hợp với __init__.py và features.py trong thư mục ember2018. Hãy kiểm tra kỹ đường dẫn thư mục trước khi chạy.
+
+Chuyển đổi định dạng: Chạy process_and_split_features.py để chuyển đổi dữ liệu thô sang các file .csv.
+
+Trực quan hóa (EDA): Chạy analyze_and_visualize_data.py để xem các biểu đồ phân bố dữ liệu sau xử lý.
+
+Làm sạch dữ liệu: Chạy Xu_ly_dl.py. Bước này thực hiện cân bằng dữ liệu, giảm chiều và lọc nhiễu.
+
+Giai đoạn 2: Huấn luyện Mô hình
+Chạy lần lượt các script huấn luyện để tạo ra file model (.pkl hoặc .h5):
+
+python Random_forest/RF.py
+
+python LightGBM/LightGBM.py
+
+python MLP/MLP.py
+
+python XGBoost/XGBoost.py
+
+python CatBoost/CB.py
+
+Giai đoạn 3: Cấu hình & Chạy Ứng dụng
+Cập nhật Model: Mở file App.py, tìm dòng khai báo đường dẫn model và thay thế bằng đường dẫn tới file .pkl tốt nhất vừa huấn luyện (ví dụ: LightGBM/best_lightgbm_model.pkl).
+
+Khởi chạy:
+
+⚠️ Bắt buộc: Chạy App.py dưới quyền Administrator để ứng dụng có thể quét sâu vào Autorun và các tiến trình hệ thống.
+
+🧪 Hướng dẫn Kiểm thử (Testing)
+Hệ thống đi kèm file myProject.exe (Keylogger mô phỏng) để phục vụ kiểm thử.
+
+Quy trình Test:
+Khởi chạy App.py (Admin).
+
+Chạy file myProject.exe (Admin). Keylogger sẽ bắt đầu ghi nhận phím bấm và lưu log tại thư mục hiện hành.
+
+Trên giao diện App, quan sát cảnh báo hoặc dùng tính năng Quét Mục Khởi Động.
+
+Các phím tắt điều khiển Keylogger (myProject.exe):
+Ctrl + Shift + Q: Tắt ứng dụng Keylogger.
+
+Ctrl + K: Kiểm tra trạng thái hoạt động của Keylogger.
+
+🧹 Hướng dẫn Dọn dẹp sau Kiểm thử
+Keylogger mẫu sẽ tạo một khóa Registry để tự khởi động cùng Windows. Sau khi test xong, vui lòng thực hiện các bước sau để xóa bỏ hoàn toàn:
+
+Nhấn tổ hợp phím Win + R.
+
+Nhập lệnh regedit và nhấn OK.
+
+Truy cập đường dẫn sau trên thanh địa chỉ:
+
+Plaintext
+
+Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run
+Tìm Value có tên ListenToUser, chuột phải và chọn Delete.
 ---
