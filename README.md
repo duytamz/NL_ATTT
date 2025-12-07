@@ -164,4 +164,12 @@ Triển khai huấn luyện 05 thuật toán với các chiến lược tối ư
     - Kết hợp **Behavior Check** (giám sát hành vi IO/CPU bất thường).
 - Tích hợp công cụ **Autoruns** để kiểm tra khởi động hệ thống.
 
+
+## Trình tự chạy các file
+1. Chạy analyze_data.py đồng thời kết hợp với 2 file init.py và features.py (lưu ý về đường dẫn thư mục).
+2. Chạy process_and_split_features.py: xử lý dữ liệu thô thành các file csv.
+3. Chạy analyze_and_visualize_data.py: trực quan dữ liệu sau khi đã xử lý.
+4. Chạy Xu_ly_dl.py: xử lý sạch dữ liệu (ví dụ như cân bằng, giảm chiều...).
+5. Lần lượt chạy các mô hình máy học (random forest, LightGBM, MLP, XGBoost, CatBoost).
+6. Thay đường dẫn đến file .pkl ở file App.py và tiến hành test.
 ---
