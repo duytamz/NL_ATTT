@@ -172,4 +172,12 @@ Triển khai huấn luyện 05 thuật toán với các chiến lược tối ư
 4. Chạy Xu_ly_dl.py: xử lý sạch dữ liệu (ví dụ như cân bằng, giảm chiều...).
 5. Lần lượt chạy các mô hình máy học (random forest, LightGBM, MLP, XGBoost, CatBoost).
 6. Thay đường dẫn đến file .pkl ở file App.py và tiến hành test.
+7. File chương trình keylogger dùng để test là myProject.exe
+- Một số lưu ý:
+          - Chạy App.py dưới quyền Administrator để có thể mở rộng Autorun quét các tiến trình.
+          - File myProject.exe chạy dưới quyền Administrator, ứng dụng lưu ở thư mục hiện hành, muốn tắt ứng dụng sử dụng tổ hợp phím ctrl + shift + Q, kiểm tra keylogger có còn hoạt động không thì nhấn tổ hợp              phím ctrl + K.
+          - Khi test xong nên xóa keylogger chạy nền bằng cách sau:
+                  a. Nhấn tổ hợp phím win + R.
+                  b. Nhập 'regedit' và nhấn 'OK'.
+                  c. Đến đường dẫn 'Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run' và xóa tiến trình có tên 'ListenToUser'.
 ---
