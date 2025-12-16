@@ -1,0 +1,322 @@
+================================================================================
+RANDOM FOREST - PROGRESSIVE TRAINING LOG
+================================================================================
+
+CONFIGURATION
+--------------------------------------------------------------------------------
+Training Date: 2025-11-30 18:08:09
+Dataset: EMBER 2018 (Malware Detection)
+Train Samples: 640,000
+Test Samples: 160,000
+Features: 1864
+
+BASE PARAMETERS
+--------------------------------------------------------------------------------
+  max_depth: 20
+  min_samples_leaf: 2
+  max_features: sqrt
+  class_weight: balanced
+
+PROGRESSIVE SETTINGS
+--------------------------------------------------------------------------------
+Initial Trees: 100
+Increment per Epoch: +50
+Max Trees: 1000
+Max Epochs: 50
+Early Stopping Patience: 10
+Min Improvement: 0.01%
+
+================================================================================
+TRAINING HISTORY
+================================================================================
+
+EPOCH 1
+--------------------------------------------------------------------------------
+Number of Trees: 100
+
+Train Metrics:
+  Accuracy:  0.985870
+  Precision: 0.989658
+  Recall:    0.982003
+  F1 Score:  0.985815
+
+Test Metrics:
+  Accuracy:  0.960363
+  Precision: 0.967219
+  Recall:    0.953025
+  F1 Score:  0.960070
+
+Time: 6.7 minutes
+
+================================================================================
+
+EPOCH 2
+--------------------------------------------------------------------------------
+Number of Trees: 150
+
+Train Metrics:
+  Accuracy:  0.985934
+  Precision: 0.989721
+  Recall:    0.982069
+  F1 Score:  0.985880
+
+Test Metrics:
+  Accuracy:  0.960638
+  Precision: 0.967356
+  Recall:    0.953450
+  F1 Score:  0.960353
+
+Time: 10.8 minutes
+
+================================================================================
+
+EPOCH 3
+--------------------------------------------------------------------------------
+Number of Trees: 200
+
+Train Metrics:
+  Accuracy:  0.986105
+  Precision: 0.989656
+  Recall:    0.982478
+  F1 Score:  0.986054
+
+Test Metrics:
+  Accuracy:  0.960844
+  Precision: 0.967322
+  Recall:    0.953913
+  F1 Score:  0.960570
+
+Time: 14.1 minutes
+
+================================================================================
+
+EPOCH 4
+--------------------------------------------------------------------------------
+Number of Trees: 250
+
+Train Metrics:
+  Accuracy:  0.986230
+  Precision: 0.989782
+  Recall:    0.982603
+  F1 Score:  0.986180
+
+Test Metrics:
+  Accuracy:  0.961013
+  Precision: 0.967499
+  Recall:    0.954075
+  F1 Score:  0.960740
+
+Time: 17.1 minutes
+
+================================================================================
+
+EPOCH 5
+--------------------------------------------------------------------------------
+Number of Trees: 300
+
+Train Metrics:
+  Accuracy:  0.986289
+  Precision: 0.989811
+  Recall:    0.982694
+  F1 Score:  0.986240
+
+Test Metrics:
+  Accuracy:  0.960963
+  Precision: 0.967401
+  Recall:    0.954075
+  F1 Score:  0.960692
+
+Time: 20.8 minutes
+
+================================================================================
+
+EPOCH 6
+--------------------------------------------------------------------------------
+Number of Trees: 350
+
+Train Metrics:
+  Accuracy:  0.986320
+  Precision: 0.989796
+  Recall:    0.982772
+  F1 Score:  0.986272
+
+Test Metrics:
+  Accuracy:  0.960869
+  Precision: 0.967501
+  Recall:    0.953775
+  F1 Score:  0.960589
+
+Time: 24.2 minutes
+
+================================================================================
+
+EPOCH 7
+--------------------------------------------------------------------------------
+Number of Trees: 400
+
+Train Metrics:
+  Accuracy:  0.986417
+  Precision: 0.989928
+  Recall:    0.982834
+  F1 Score:  0.986368
+
+Test Metrics:
+  Accuracy:  0.961000
+  Precision: 0.967712
+  Recall:    0.953825
+  F1 Score:  0.960718
+
+Time: 29.7 minutes
+
+================================================================================
+
+EPOCH 8
+--------------------------------------------------------------------------------
+Number of Trees: 450
+
+Train Metrics:
+  Accuracy:  0.986372
+  Precision: 0.989819
+  Recall:    0.982853
+  F1 Score:  0.986324
+
+Test Metrics:
+  Accuracy:  0.960969
+  Precision: 0.967591
+  Recall:    0.953887
+  F1 Score:  0.960690
+
+Time: 31.4 minutes
+
+================================================================================
+
+EPOCH 9
+--------------------------------------------------------------------------------
+Number of Trees: 500
+
+Train Metrics:
+  Accuracy:  0.986339
+  Precision: 0.989704
+  Recall:    0.982903
+  F1 Score:  0.986292
+
+Test Metrics:
+  Accuracy:  0.960950
+  Precision: 0.967471
+  Recall:    0.953975
+  F1 Score:  0.960676
+
+Time: 35.3 minutes
+
+================================================================================
+
+EPOCH 10
+--------------------------------------------------------------------------------
+Number of Trees: 550
+
+Train Metrics:
+  Accuracy:  0.986308
+  Precision: 0.989639
+  Recall:    0.982906
+  F1 Score:  0.986261
+
+Test Metrics:
+  Accuracy:  0.960894
+  Precision: 0.967574
+  Recall:    0.953750
+  F1 Score:  0.960612
+
+Time: 39.1 minutes
+
+================================================================================
+
+EPOCH 11
+--------------------------------------------------------------------------------
+Number of Trees: 600
+
+Train Metrics:
+  Accuracy:  0.986316
+  Precision: 0.989654
+  Recall:    0.982906
+  F1 Score:  0.986269
+
+Test Metrics:
+  Accuracy:  0.960969
+  Precision: 0.967591
+  Recall:    0.953887
+  F1 Score:  0.960690
+
+Time: 42.6 minutes
+
+================================================================================
+
+EPOCH 12
+--------------------------------------------------------------------------------
+Number of Trees: 650
+
+Train Metrics:
+  Accuracy:  0.986261
+  Precision: 0.989681
+  Recall:    0.982769
+  F1 Score:  0.986213
+
+Test Metrics:
+  Accuracy:  0.960944
+  Precision: 0.967601
+  Recall:    0.953825
+  F1 Score:  0.960664
+
+Time: 43.1 minutes
+
+================================================================================
+
+EPOCH 13
+--------------------------------------------------------------------------------
+Number of Trees: 700
+
+Train Metrics:
+  Accuracy:  0.986291
+  Precision: 0.989740
+  Recall:    0.982769
+  F1 Score:  0.986242
+
+Test Metrics:
+  Accuracy:  0.961025
+  Precision: 0.967630
+  Recall:    0.953963
+  F1 Score:  0.960748
+
+Time: 47.5 minutes
+
+================================================================================
+
+EPOCH 14
+--------------------------------------------------------------------------------
+Number of Trees: 750
+
+Train Metrics:
+  Accuracy:  0.986278
+  Precision: 0.989706
+  Recall:    0.982778
+  F1 Score:  0.986230
+
+Test Metrics:
+  Accuracy:  0.961006
+  Precision: 0.967558
+  Recall:    0.954000
+  F1 Score:  0.960731
+
+Time: 50.5 minutes
+
+================================================================================
+
+BEST MODEL
+--------------------------------------------------------------------------------
+Best Epoch: 4
+Best Test Accuracy: 0.961013
+Number of Trees: 250
+Best Test Precision: 0.967499
+Best Test Recall: 0.954075
+Best Test F1: 0.960740
+
+Total Training Time: 414.7 minutes (6.91 hours)
