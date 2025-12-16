@@ -1,0 +1,57 @@
+================================================================================
+CATBOOST - TRAINING LOG
+================================================================================
+
+CONFIGURATION
+--------------------------------------------------------------------------------
+Training Date: 2025-11-30 20:26:47
+Dataset: EMBER 2018 (Malware Detection)
+Train Samples: 640,000
+Test Samples: 160,000
+Features: 1864
+
+OPTIMIZED PARAMETERS
+--------------------------------------------------------------------------------
+  loss_function: Logloss
+  eval_metric: Accuracy
+  custom_metric: ['F1', 'Precision', 'Recall']
+  learning_rate: 0.05
+  iterations: 5000
+  depth: 6
+  l2_leaf_reg: 3
+  border_count: 254
+  rsm: 0.8
+  bagging_temperature: 0.5
+  random_strength: 1.0
+  early_stopping_rounds: 150
+  verbose: 100
+  thread_count: 4
+  random_seed: 42
+  use_best_model: True
+  allow_writing_files: False
+
+TRAINING RESULTS
+--------------------------------------------------------------------------------
+Total Trees: 4926
+Training Time: 54.8 minutes (0.91 hours)
+
+TRAIN METRICS
+--------------------------------------------------------------------------------
+  Accuracy:  0.986567
+  Precision: 0.989540
+  Recall:    0.983531
+  F1 Score:  0.986526
+
+TEST METRICS
+--------------------------------------------------------------------------------
+  Accuracy:  0.979231
+  Precision: 0.982300
+  Recall:    0.976050
+  F1 Score:  0.979165
+
+CONFUSION MATRIX
+--------------------------------------------------------------------------------
+  True Negatives:  78,593
+  False Positives: 1,407
+  False Negatives: 1,916
+  True Positives:  78,084
